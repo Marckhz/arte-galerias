@@ -1,0 +1,11 @@
+
+
+#container {
+}
+
+.grid-item {
+	width: 400px;
+	float: left;
+	margin:5px;
+}
+
