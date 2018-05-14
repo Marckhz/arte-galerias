@@ -1,12 +1,5 @@
 
 
-$(.'grid'.masonry)({
-
-	itemSelector: '.grid-item',
-	columwidth :400
-});
-
-
 /*
 $(.'grid'.mansory)({
 

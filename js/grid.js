@@ -1,16 +1,6 @@
 
-var elem = document.querySelector('.grid')
-var msnry = new Masonry(elem, {
 
-	itemSelector : '.grid-item',
-	columWidth:400
-});
-
-var msnry = new Masonry('.grid'{
-
-})
-
-new AnimOnScroll( document.getElementByClassName( 'grid-item' ), {
+new AnimOnScroll( document.getElementById( 'ani' ), {
 				minDuration : 0.4,
 				maxDuration : 0.7,
 				viewportFactor : 0.2
