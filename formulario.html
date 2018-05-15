@@ -60,6 +60,18 @@ span.psw {
 
 }
 
+#footer{
+  text-align: right;
+  position: fixed;
+  width: 97%;
+  height: 60px;
+  bottom: 0.5px;
+
+}
+
+
+
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
@@ -81,7 +93,7 @@ span.psw {
     <img src="toResize/avatar.png" alt="Avatar" class="avatar" style="width: 200px;">
   </div>
 
-  <div class="container" >
+  <div class="container">
   	
 	<p align="center">	
 		<label  id=" my_label"for="uname"><b>Username</b></label>
@@ -103,14 +115,33 @@ span.psw {
     </label>
   </div>
 
-  <div class="container" style="">
+ <div class="container" style="">
 	<p align="center">
 		<button type="button" class="cancelbtn">Cancel</button>
 		<div class="psw">Forgot <a href="#">password?</a></div>
 		   
 	</p>
-  </div>
+ </div>
 </form>
+
+
+  <footer> 
+        <div class="container" id="footer">
+          <div class="row">
+            <div class="col-md-12">
+              <hr>
+                <p class="pull-left">
+                  <a href="https://elrobotista.com/">ElRobotista.com   2018</a>
+                  <a href="#">Acerca de</a>
+                  <a href="#">Contacto</a>
+                </p>
+
+                
+            </div>
+          </div>
+        </div>
+  </footer>
+          
 
 </body>
 </html>
