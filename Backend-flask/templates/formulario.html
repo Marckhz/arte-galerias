@@ -88,40 +88,44 @@ span.psw {
 
 <h2 style="text-align: center;">Bienvenido</h2>
 
-<form action="/" method="post">
-  <div class="imgcontainer">
-    <img src="{{url_for('static',filename='toResize/avatar.png')}}" alt="Avatar'" class="avatar" style="width: 200px;">
-  </div>
+<form action="dashboard" method="post">
+        <div class="imgcontainer">
+          <img src="{{url_for('static',filename='toResize/avatar.png')}}" alt="Avatar'" class="avatar" style="width: 200px;">
+        </div>
 
-  <div class="container">
-  	
-	<p align="center">	
-		<label  id=" my_label"for="uname"><b>Username</b></label>
-		<input id="my_input "type="text" placeholder="Enter Username" name="username" required>
-	</p>	
-	<p align="center">	
-	    <label for="psw"><b>Password</b></label>
-	    <input type="password" placeholder="Enter Password" name="password" required>
+        <div class="container">
+        	
+      	<p align="center">	
+      		<label  id=" my_label"for="uname"><b>Username</b></label>
+      		<input id="my_input "type="text" placeholder="Enter Username" name="username" required>
+      	</p>	
+      	<p align="center">	
+      	    <label for="psw"><b>Password</b></label>
+      	    <input type="password" placeholder="Enter Password" name="password" required>
 
-	</p>
-	      
-    <button type="submit" class="button" value="Log In">Login</button>
+      	</p>
+      	                 
+          <button type="submit" class="button" value="Log In"href=" {{url_for('dashboard')}}"onclick ="myFunction()" >Login</button>
+            <script>
+              function myFunction(){
+                alert("Welcome!");
+              }
+                  </script>
+               
 
-         
+          <label style="display: block;">
+            <input type="checkbox" checked="checked" name="remember" ">
+             Remember me
+          </label>
+        </div>
 
-    <label style="display: block;">
-      <input type="checkbox" checked="checked" name="remember" ">
-       Remember me
-    </label>
-  </div>
-
- <div class="container" style="">
-	<p align="center">
-		<button type="button" class="cancelbtn">Cancel</button>
-		<div class="psw">Forgot <a href="#">password?</a></div>
-		   
-	</p>
- </div>
+       <div class="container" style="">
+      	<p align="center">
+      		<button type="button" class="cancelbtn">Cancel</button>
+      		<div class="psw">Forgot <a href="#">password?</a></div>
+      		   
+      	</p>
+       </div>
 </form>
 
 

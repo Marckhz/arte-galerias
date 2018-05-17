@@ -27,8 +27,8 @@ def registro():
 		username = request.form['username']
 		password = request.form['password']
 		email = request.form['email']
-		dbHandler.insertUser(username, password)
-		users = dbHandler.retrieveUsers()
+		dbHandler.insertUser(username, password, email)
+		users  = dbHandler.retrieveUsers()
 
 		return render_template('index.html', users=users)
 	else:
@@ -39,6 +39,16 @@ def registro():
 @app.route('/formulario', methods=['GET', 'POST'])
 def login():
 	return render_template('formulario.html')
+	users = dbHandler.retrieveUsers()
+	if request.method == 'POST':
+
+		
+		if users not in dbHandler.retrieveUsers():
+			message = 'not sure quite...you talking about'
+			return flash(message)
+		else:
+
+			return render_template('index')
 
 	
 	
