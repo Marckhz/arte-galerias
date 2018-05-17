@@ -5,9 +5,10 @@
 	<meta name="viewport" content="width=device-width, user-scalabe= no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	
 	<title>Document</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')}}">
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='/css/styles.css')}}">
 </head>
 
 <body>
@@ -44,9 +45,8 @@
 							</ul>
 						</li>
 
-						<li><a href="#">Contacto</a> </li>
-						<li><a href="formulario.html">Login</a></li>
-						<li><<a href="registro.html">Registrar</a>
+						<li><a href="{{url_for('registro')}}">registro</a></li>
+						<li><a href="{{url_for('login')}}">login</a></li>
 
 					</ul>
 				
@@ -79,13 +79,13 @@
 						<!--- Contenedor de slides-->
 						<div class="carousel-inner">
 							<div class="item active">
-								<img src="img/s1.jpg" alt=" ">
+								<img src="{{url_for('static',filename='img/s1.jpg')}}" alt=" ">
 							</div>
 							<div class="item">
-								<img src="img/s2.jpg" alt="">
+								<img src="{{url_for('static',filename='img/s2.jpg')}}" alt="">
 							</div>
 							<div class="item">
-								<img src="img/s3.jpg" alt="">
+								<img src="{{url_for('static',filename='img/s3.jpg')}}" alt="">
 							</div>
 						</div>
 					<!--Controles -->
@@ -122,55 +122,55 @@
 					
 								
 					<a href="#">
-						<img src="toResize/r1.jpg" style="position: relative; width: 400px;" alt="">
+						<img src="{{url_for('static', filename='toResize/r1.jpg')}}" style="position: relative; width: 400px;" alt="">
 					</a>
 				</div>
 
 				<div class="col-xs-6 col-md-3">
 					<a href="#">
-						<img src="toResize/r2.jpg" style="position: relative; width: 450px; left: 120px;" alt="">
+						<img src="{{url_for('static', filename='toResize/r2.jpg')}}" style="position: relative; width: 450px; left: 120px;" alt="">
 					</a>
 				</div>
 
 				<div class="col-xs-6 col-md-3">
 					<a href="#">
-						<img src="toResize/r3.jpg" style="position: relative; width: 450px;top: 320px; right: 170px;" alt="">
+						<img src="{{url_for('static', filename='toResize/r3.jpg')}}" style="position: relative; width: 450px;top: 320px; right: 170px;" alt="">
 					</a>
 				</div>
 
 				<div class="col-xs-6 col-md-3">
 					<a href="#">
-						<img src="toResize/r4.jpg" style="position: relative; width: 400px;" alt="">
+						<img src="{{url_for('static', filename='toResize/r4.jpg')}}" style="position: relative; width: 400px;" alt="">
 					</a>
 				</div>
 
 				<div class="col-xs-6 col-md-3">
 					<a href="#">
-						<img src="toResize/r5.jpg" style="position: relative; width: 400px; top: 20px;" alt="">
+						<img src="{{url_for('static',filename='toResize/r5.jpg')}}" style="position: relative; width: 400px; top: 20px;" alt="">
 					</a>
 				</div>
 
 				<div class="col-xs-6 col-md-3">
 					<a href="#">
-						<img src="toResize/r6.jpg" style="position: relative; width: 450px; top: 40px; left:120px;" alt="">
+						<img src="{{url_for('static', filename='toResize/r6.jpg')}}" style="position: relative; width: 450px; top: 40px; left:120px;" alt="">
 					</a>
 
 				<div class="col-xs-6 col-md-3">
 
 					<a href="#">
-						<img src="toResize/r7.jpg" style="position: relative; width: 400px; left: 570px; bottom: 290px;" alt="">
-					</a>
-				</div>
-
-				<div class="col-xs-6 col-md-3">
-					<a href="#">
-						<img src="toResize/r11.jpg" style="position: relative; width: 450px; top: 60px; right: : 400px; left: 40px; height: 260px; bottom: 20px;" alt="">
+						<img src="{{url_for('static', filename='toResize/r7.jpg')}}" style="position: relative; width: 400px; left: 570px; bottom: 290px;" alt="">
 					</a>
 				</div>
 
 				<div class="col-xs-6 col-md-3">
 					<a href="#">
-						<img src="toResize/r9.jpg" style="position: relative; width: 400px; left: 440px; bottom: 20px; height: 340px;" alt="">
+						<img src="{{url_for('static', filename='toResize/r11.jp')}}g" style="position: relative; width: 450px; top: 60px; right: : 400px; left: 40px; height: 260px; bottom: 20px;" alt="">
+					</a>
+				</div>
+
+				<div class="col-xs-6 col-md-3">
+					<a href="#">
+						<img src="{{url_for('static', filename='toResize/r9.jpg')}}" style="position: relative; width: 400px; left: 440px; bottom: 20px; height: 340px;" alt="">
 					</a>
 				</div>
 			</div>
@@ -184,12 +184,17 @@
 								<p class="pull-left">
 									<a href="https://elrobotista.com/">ElRobotista.com</a>
 									<a href="#">Acerca de</a>
-									<a href="#">Contacto</a>
 								</p>
 
 								<p class="pull-right">
 									<a href="#">Subir en Pagina</a>
 								</p>
+								<p align="center">
+									<a href="https://www.facebook.com/elrobotista" class="fa fa-facebook" style="font-size: 30px; padding: 10px;"></a>
+									<a href="https://twitter.com/elrobotista" class="fa fa-twitter" style="font-size: 30px; padding: 10px;"></a>
+
+								</p>
+
 						</div>
 					</div>
 				</div>

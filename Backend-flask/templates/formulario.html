@@ -88,24 +88,24 @@ span.psw {
 
 <h2 style="text-align: center;">Bienvenido</h2>
 
-<form action="/action_page.php">
+<form action="/" method="post">
   <div class="imgcontainer">
-    <img src="toResize/avatar.png" alt="Avatar" class="avatar" style="width: 200px;">
+    <img src="{{url_for('static',filename='toResize/avatar.png')}}" alt="Avatar'" class="avatar" style="width: 200px;">
   </div>
 
   <div class="container">
   	
 	<p align="center">	
 		<label  id=" my_label"for="uname"><b>Username</b></label>
-		<input id="my_input "type="text" placeholder="Enter Username" name="uname" required>
+		<input id="my_input "type="text" placeholder="Enter Username" name="username" required>
 	</p>	
 	<p align="center">	
 	    <label for="psw"><b>Password</b></label>
-	    <input type="password" placeholder="Enter Password" name="psw" required>
+	    <input type="password" placeholder="Enter Password" name="password" required>
 
 	</p>
 	      
-    <button type="submit">Login</button>
+    <button type="submit" class="button" value="Log In">Login</button>
 
          
 
